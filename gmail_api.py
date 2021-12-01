@@ -7,10 +7,11 @@ from google.oauth2.credentials import Credentials
 import base64
 import requests
 import re
+import os
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/gmail.modify']
-PRIMER_API_KEY = 'Jkan5rpruBkmDajv_lll7beQ8xzhgzIM2gB7rhl_WZc'
+PRIMER_API_KEY = os.getenv('PRIMER_API_KEY')
 
 def create_label(label: str, service: any):
     data = {'name': label}
