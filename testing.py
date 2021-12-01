@@ -1,10 +1,12 @@
 import requests
+import os
 
+PRIMER_API_KEY = os.getenv('PRIMER_API_KEY')
 
 def main():
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer Jkan5rpruBkmDajv_lll7beQ8xzhgzIM2gB7rhl_WZc'
+        'Authorization': f'Bearer {PRIMER_API_KEY}'
     }
 
     emails = [
